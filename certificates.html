@@ -215,32 +215,43 @@ body,.aboutcopy{color:#243b38!important}
   .page-links,.home-snapshot .cards{grid-template-columns:1fr!important}
 }
 
-/* Certificate viewer: interface intentionally provides viewing only.
-   Note: public web content cannot be made technically impossible to save. */
+/* Image-based certificate viewer for reliable viewing on GitHub Pages */
 .cert-viewer{
-  position:fixed;inset:0;z-index:9999;background:rgba(4,34,27,.92);
+  position:fixed;inset:0;z-index:9999;background:rgba(4,34,27,.94);
   display:none;align-items:center;justify-content:center;padding:18px
 }
 .cert-viewer.open{display:flex}
 .cert-panel{
-  width:min(1100px,100%);height:min(90vh,850px);background:#fff;
+  width:min(1100px,100%);height:min(92vh,900px);background:#f7f8f5;
   border-radius:18px;overflow:hidden;display:flex;flex-direction:column;
   box-shadow:0 24px 80px rgba(0,0,0,.35)
 }
 .cert-toolbar{
   display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:12px 16px;background:#f7f8f5;border-bottom:1px solid #dfe8e5
+  padding:12px 16px;background:#fff;border-bottom:1px solid #dfe8e5
 }
 .cert-toolbar b{color:#008080}
 .cert-close{
   border:0;background:#008080;color:#fff;border-radius:10px;
   padding:9px 14px;font-weight:800;cursor:pointer
 }
-.cert-frame{width:100%;height:100%;border:0;background:#eef3f1}
+.cert-pages{
+  flex:1;overflow:auto;padding:18px;background:#edf3f1;
+  display:flex;flex-direction:column;align-items:center;gap:18px
+}
+.cert-pages img{
+  width:min(100%,980px);height:auto;display:block;background:#fff;
+  box-shadow:0 8px 26px rgba(20,45,38,.16);border-radius:8px;
+  user-select:none;-webkit-user-drag:none
+}
+.cert-note{
+  font-size:11px;color:#66736e;font-weight:600
+}
 @media(max-width:760px){
-  .cert-viewer{padding:8px}
-  .cert-panel{height:94vh;border-radius:14px}
-  .cert-toolbar{padding:10px 12px}
+  .cert-viewer{padding:7px}
+  .cert-panel{height:96vh;border-radius:12px}
+  .cert-pages{padding:9px;gap:10px}
+  .cert-toolbar{padding:9px 11px}
 }
 
 </style>
@@ -270,63 +281,63 @@ body,.aboutcopy{color:#243b38!important}
     <b>Drone Mapping — Basic Level</b>
     <p class="muted">Papua Mapping Center · 2020</p>
     <p>Basic training in mapping using drone technology.</p>
-    <a class="mini-link" href="#" data-cert="01_Pelatihan_Pemetaan_Teknologi_Drone_Basic_Level_2020.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="01_Pelatihan_Pemetaan_Teknologi_Drone_Basic_Level_2020_page_1.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>MBKM — Pejuang Muda</b>
     <p class="muted">2021</p>
     <p>Professional development in social mapping, communication, project planning, risk management, monitoring, resource management, and team-based projects.</p>
-    <a class="mini-link" href="#" data-cert="06_MBKM_Pejuang_Muda_2021.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="06_MBKM_Pejuang_Muda_2021_page_1.jpg|06_MBKM_Pejuang_Muda_2021_page_2.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>SolidWorks Intermediate Workshop</b>
     <p class="muted">2023</p>
     <p>Participation in SolidWorks Intermediate Class Level workshop training.</p>
-    <a class="mini-link" href="#" data-cert="08_Workshop_SolidWorks_Intermediate_2023.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="08_Workshop_SolidWorks_Intermediate_2023_page_1.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>Basic Accounting Training</b>
     <p class="muted">2021 · 20 JP</p>
     <p>Completed basic accounting training as an additional administrative and financial-recording competency.</p>
-    <a class="mini-link" href="#" data-cert="05_Pelatihan_Akuntansi_Dasar_2021.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="05_Pelatihan_Akuntansi_Dasar_2021_page_1.jpg|05_Pelatihan_Akuntansi_Dasar_2021_page_2.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>Small-Scale Gold Mining Practices</b>
     <p class="muted">Webinar · 2020</p>
     <p>Professional learning activity related to small-scale gold mining practices in North Minahasa.</p>
-    <a class="mini-link" href="#" data-cert="02_Webinar_Pertambangan_Emas_Skala_Kecil_Minahasa_Utara_2020.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="02_Webinar_Pertambangan_Emas_Skala_Kecil_Minahasa_Utara_2020_page_1.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>Wetland Agriculture Development</b>
     <p class="muted">National Webinar · 2020</p>
     <p>Learning activity on innovation and technology for wetland agriculture and food self-sufficiency.</p>
-    <a class="mini-link" href="#" data-cert="03_Webinar_Pengembangan_Pertanian_Lahan_Basah_2020.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="03_Webinar_Pengembangan_Pertanian_Lahan_Basah_2020_page_1.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>Online Soil Judging Contest</b>
     <p class="muted">World Soil Day · 2020</p>
     <p>Participation in an online soil judging activity organized in celebration of World Soil Day.</p>
-    <a class="mini-link" href="#" data-cert="04_Online_Soil_Judging_Contest_World_Soil_Day_2020.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="04_Online_Soil_Judging_Contest_World_Soil_Day_2020_page_1.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>National FOKUSHIMITI XVI Meeting</b>
     <p class="muted">Delegation · 2019</p>
     <p>Represented Universitas Halu Oleo as a delegation in the national FOKUSHIMITI XVI meeting.</p>
-    <a class="mini-link" href="#" data-cert="09_Delegasi_Pertemuan_Nasional_FOKUSHIMITI_XVI_2019.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="09_Delegasi_Pertemuan_Nasional_FOKUSHIMITI_XVI_2019_page_1.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 
   <div class="doc-card reveal">
     <b>NGOLAM National Online Discussion</b>
     <p class="muted">Participant · 2020</p>
     <p>National discussion on agriculture, agricultural land, and farmer welfare.</p>
-    <a class="mini-link" href="#" data-cert="10_Diskusi_Online_Nasional_NGOLAM_2020.pdf" target="_blank" class="mini-link cert-open">View certificate ↗</a>
+    <a class="mini-link" href="#" data-images="10_Diskusi_Online_Nasional_NGOLAM_2020_page_1.jpg" target="_blank" class="mini-link cert-open">View certificate ↗</a>
   </div>
 </div>
 
@@ -371,27 +382,37 @@ buttons.forEach(btn=>{
   });
 });
 
+function openCertViewer(files){
+  const viewer=document.getElementById('certViewer');
+  const pages=document.getElementById('certPages');
+  pages.innerHTML='';
+  files.forEach(file=>{
+    const img=document.createElement('img');
+    img.src=file;
+    img.alt='Certificate preview';
+    img.loading='lazy';
+    img.draggable=false;
+    img.addEventListener('contextmenu',e=>e.preventDefault());
+    pages.appendChild(img);
+  });
+  viewer.classList.add('open');
+  viewer.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeCertViewer(){
+  const viewer=document.getElementById('certViewer');
+  viewer.classList.remove('open');
+  viewer.setAttribute('aria-hidden','true');
+  document.getElementById('certPages').innerHTML='';
+  document.body.style.overflow='';
+}
 document.querySelectorAll('.cert-open').forEach(link=>{
   link.addEventListener('click',e=>{
     e.preventDefault();
-    const file=link.dataset.cert;
-    const viewer=document.getElementById('certViewer');
-    const frame=document.getElementById('certFrame');
-    // PDF viewer parameters hide the standard toolbar in supporting browsers.
-    frame.src=file+'#toolbar=0&navpanes=0&scrollbar=1&view=FitH';
-    viewer.classList.add('open');
-    viewer.setAttribute('aria-hidden','false');
-    document.body.style.overflow='hidden';
+    const files=(link.dataset.images||'').split('|').filter(Boolean);
+    openCertViewer(files);
   });
 });
-function closeCertViewer(){
-  const viewer=document.getElementById('certViewer');
-  const frame=document.getElementById('certFrame');
-  viewer.classList.remove('open');
-  viewer.setAttribute('aria-hidden','true');
-  frame.src='';
-  document.body.style.overflow='';
-}
 document.getElementById('certClose')?.addEventListener('click',closeCertViewer);
 document.getElementById('certViewer')?.addEventListener('click',e=>{
   if(e.target.id==='certViewer') closeCertViewer();
@@ -404,10 +425,13 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCertViewer();})
 <div id="certViewer" class="cert-viewer" aria-hidden="true">
   <div class="cert-panel" role="dialog" aria-modal="true" aria-label="Certificate viewer">
     <div class="cert-toolbar">
-      <b>Certificate Preview</b>
+      <div>
+        <b>Certificate Preview</b>
+        <div class="cert-note">Preview only - original PDF is not linked from this page.</div>
+      </div>
       <button type="button" class="cert-close" id="certClose">Close</button>
     </div>
-    <iframe id="certFrame" class="cert-frame" title="Certificate preview"></iframe>
+    <div id="certPages" class="cert-pages"></div>
   </div>
 </div>
 

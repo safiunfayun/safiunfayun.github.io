@@ -1,0 +1,8 @@
+UPLOAD TO GITHUB
+1. Upload certificates.html and ALL JPG files in this folder to the root of safiunfayun.github.io.
+2. Commit changes.
+3. After confirming the certificate previews work, delete the 9 certificate PDF files from the public GitHub repository.
+4. Keep Safiun_CV.pdf if you still want CV download available.
+
+This version displays certificate images in an on-page viewer instead of embedding PDFs.
+The redacted public MBKM certificate was used for its preview.
